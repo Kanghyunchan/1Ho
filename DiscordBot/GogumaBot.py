@@ -58,4 +58,4 @@ async def URLPlay(ctx, *, url):
         await ctx.send("노래가 이미 재생되고 있습니다!")
 
 
-bot.run("ODI4NDE2OTgyOTY1NjgyMjA2.YGpRbw.ABzH75Sn0udmlJ-ZP6hG2kSvqs4")
+봇 . 실행 ( "your token")
