@@ -16,7 +16,7 @@ async def on_ready():
     print("다음으로 로그인합니다: ")
     print(bot.user.name)
     print("connection was succesful")
-    game = discord.Game("$help")
+    game = discord.Game("$도움말")
     await bot.change_presence(status = discord.Status.online, activity = game)
 
 @bot.command()
@@ -26,7 +26,6 @@ async def 따라하기(ctx, *, text):
 @bot.command()
 async def join(ctx):
     print(ctx.author.voice)
-
     try:
         global vc
         vc = await ctx.message.author.voice.channel.connect()
@@ -62,6 +61,8 @@ async def play(ctx, *, url):
 @bot.command()
 async def 도움말(ctx):
     helpText = "$help : 명령어목록\n $join : 음성방에 봇 들어오기\n $leave : 음성방에 봇 내보내기\n $play (URL) : URL의 노래 재생"
-    await ctx.send(embed = discord.Embed(title = "고구마봇 명령어", description = helpText, color = 0xFE2E9A))
+    embed = discord.Embed(title = "고구마봇 명령어", description = helpText, color = 0xFE2E9A)
+    embed.set_thumbnail(url = "https://imgur.com/JEY4W5O")
+    await ctx.send(embed = embed)
 
 bot.run("your token")
