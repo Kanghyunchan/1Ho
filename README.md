@@ -1,2 +1,2 @@
 # 1Ho
-newbie
+Lazy but hard-working newbie developer. 
